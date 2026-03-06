@@ -5,11 +5,12 @@ An OpenClaw skill that generates executive-ready market analysis reports coverin
 ## Features
 
 - Product market sizing (TAM/SAM/SOM)
+- Traffic & user analysis (Top N ranking, DAU/MAU, traffic ceiling estimation)
 - Competitive landscape analysis with positioning matrix
 - Feature comparison scoring (1-5 scale)
 - SWOT analysis
 - Pricing intelligence
-- PDF/DOCX export with styled formatting
+- PDF/DOCX export with styled formatting (emoji-free for wkhtmltopdf compatibility)
 
 ## Installation
 

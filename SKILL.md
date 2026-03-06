@@ -52,6 +52,11 @@ Search queries to run (replace `{product}` with target):
 {product} G2 reviews rating
 {product} product roadmap announcements
 {industry} TAM SAM SOM market size
+{product} monthly visits traffic similarweb
+{product} DAU MAU active users
+{industry} top sites traffic ranking
+site:similarweb.com {product}
+site:semrush.com {product} traffic
 ```
 
 #### 2b. API Data (when keys configured)
@@ -81,11 +86,12 @@ Process collected data through these analysis frameworks. See `{baseDir}/referen
 
 Run each applicable framework:
 1. **Market Sizing** — TAM → SAM → SOM with sources and assumptions
-2. **Competitive Positioning** — 2x2 matrix (pick relevant axes per industry)
-3. **Feature Comparison** — normalized scoring table (1-5 scale)
-4. **SWOT Analysis** — for target product relative to market
-5. **Pricing Intelligence** — tier comparison table with value-per-dollar notes
-6. **Key Findings** — 3-5 bullet executive takeaways
+2. **Traffic & User Analysis** — Top N players, monthly/daily visits, DAU/MAU, traffic sources, traffic ceiling estimation
+3. **Competitive Positioning** — 2x2 matrix (pick relevant axes per industry)
+4. **Feature Comparison** — normalized scoring table (1-5 scale)
+5. **SWOT Analysis** — for target product relative to market
+6. **Pricing Intelligence** — tier comparison table with value-per-dollar notes
+7. **Key Findings** — 3-5 bullet executive takeaways
 
 ### Step 4 — Report Generation (Chat Preview)
 
@@ -103,23 +109,31 @@ Output the report in Markdown directly in chat using this structure. See `{baseD
 ### 1.1 市場規模 (TAM/SAM/SOM)
 ### 1.2 市場趨勢與驅動力
 
-## 2. 競品格局
-### 2.1 競品定位矩陣
-### 2.2 競品概覽表
+## 2. 流量與用戶分析
+### 2.1 市場 Top N 玩家流量排名
+(table: 排名 | 網站/平台 | 月訪問量 | 日均訪問量 | DAU | MAU | 主要流量來源 | YoY 變化)
+### 2.2 流量天花板估算
+(Based on TAM user base × conversion × frequency; provide optimistic/base/conservative scenarios)
+### 2.3 流量結構分析
+(traffic source breakdown: direct/search/social/referral; geo distribution; device split)
+
+## 3. 競品格局
+### 3.1 競品定位矩陣
+### 3.2 競品概覽表
 (table: 公司 | 成立年份 | 融資 | 估值 | 員工數 | 核心產品)
 
-## 3. 功能對比分析
-### 3.1 功能評分矩陣
+## 4. 功能對比分析
+### 4.1 功能評分矩陣
 (table: 功能 | {product} | {comp1} | {comp2} | ... scored 1-5)
-### 3.2 差異化亮點
+### 4.2 差異化亮點
 
-## 4. 定價分析
+## 5. 定價分析
 (table: 方案 | {product} | {comp1} | {comp2} | ...)
 
-## 5. SWOT 分析
+## 6. SWOT 分析
 (2x2 grid: Strengths | Weaknesses | Opportunities | Threats)
 
-## 6. 關鍵發現與建議
+## 7. 關鍵發現與建議
 (numbered list, 3-5 actionable items)
 
 ## 附錄
@@ -132,7 +146,7 @@ Output the report in Markdown directly in chat using this structure. See `{baseD
 - Use tables for any comparison data — executives scan tables, not paragraphs
 - Bold the single most important number in each section
 - Keep body text ≤3 sentences per paragraph
-- Use 🟢🟡🔴 indicators in feature matrices for quick scanning
+- Use PDF-safe text indicators in matrices: [H]=High/Good, [M]=Medium, [L]=Low/Weak (avoid emoji like 🟢🟡🔴 — wkhtmltopdf cannot render them, causing blank cells)
 - Chinese (zh-TW) as default language; switch to English if user writes in English
 
 ### Step 5 — Export (On Request)
