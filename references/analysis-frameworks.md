@@ -144,17 +144,17 @@ Pick 2 axes most relevant to the industry:
 - Present as a text-based 2x2 quadrant
 
 ### Output Format
+
+**IMPORTANT:** Do NOT use ASCII art charts — they render as garbage in PDF export.
+Use a table-based 2x2/3x3 matrix with clear axis labels in the header:
+
 ```
-                    ^ Enterprise / High Traffic
-                    |
-         {comp_A}  |  {comp_B}
-                    |
-   -----------------+------------------ >
-     Low Price      |         High Price
-                    |
-         {comp_C}  |  {target}
-                    |
-                    v SMB / Low Traffic
+**X 軸: {x_axis} | Y 軸: {y_axis}**
+
+| X / Y | High | Medium | Low |
+|-------|------|--------|-----|
+| **Category A** | {players} | {players} | -- |
+| **Category B** | -- | {players} | {players} |
 ```
 
 ---

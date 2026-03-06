@@ -104,6 +104,15 @@ Use these PDF-safe alternatives instead:
 | 2 | {country} | {pct}% |
 | 3 | {country} | {pct}% |
 
+**區域市場細分（如適用，例如華人市場、東南亞等）:**
+
+若目標市場涉及特定區域用戶群，應單獨列出該區域的 Top N 平台和用戶特徵：
+
+| 地區 | 預估 MAU | 偏好特色 | 監管環境 |
+|------|---------|---------|---------|
+| {region_1} | {mau} | {preference} | {regulation} |
+| {region_2} | {mau} | {preference} | {regulation} |
+
 **裝置分布:**
 
 | 裝置 | 佔比 |
@@ -118,7 +127,16 @@ Use these PDF-safe alternatives instead:
 
 ### 3.1 競品定位矩陣
 
-{positioning_matrix_text_chart}
+**IMPORTANT:** Do NOT use ASCII art charts — they render poorly in PDF.
+Use a table-based matrix instead, with clear axis labels:
+
+**X 軸: {x_axis_label} | Y 軸: {y_axis_label}**
+
+| {x_label} / {y_label} | {y_high} | {y_mid} | {y_low} |
+|------------------------|----------|---------|---------|
+| **{x_category_1}** | {players} | {players} | {players} |
+| **{x_category_2}** | {players} | {players} | {players} |
+| **{x_category_3}** | {players} | {players} | {players} |
 
 ### 3.2 競品概覽
 

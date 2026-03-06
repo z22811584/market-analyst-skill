@@ -116,9 +116,11 @@ Output the report in Markdown directly in chat using this structure. See `{baseD
 (Based on TAM user base × conversion × frequency; provide optimistic/base/conservative scenarios)
 ### 2.3 流量結構分析
 (traffic source breakdown: direct/search/social/referral; geo distribution; device split)
+(If target market includes a specific region like Chinese-speaking, add regional Top N platforms and user characteristics)
 
 ## 3. 競品格局
 ### 3.1 競品定位矩陣
+(Use table-based matrix with clear X/Y axis labels -- NEVER use ASCII art charts, they break in PDF)
 ### 3.2 競品概覽表
 (table: 公司 | 成立年份 | 融資 | 估值 | 員工數 | 核心產品)
 
